@@ -1,56 +1,58 @@
-# 📊 Superstore Sales Dashboard
+# 📊 Superstore Sales Dashboard – Streamlit Project
 
-An interactive business intelligence dashboard built with **Streamlit** to explore and analyze Superstore sales data across time, products, regions, and customer segments. Designed for data-driven decision-making, this tool offers dynamic filtering, KPI comparisons, and powerful visualizations using Plotly.
+This project presents an **interactive data dashboard** developed using **Streamlit** to analyze and visualize sales performance data from a global Superstore. The goal is to deliver actionable insights for business users through a modern, intuitive web interface.
 
-🚀 **Live Demo:** [Click to View Dashboard](https://kksuperstoredashboard.streamlit.app)
-
----
-
-## 🌟 Key Features
-
-- **KPI Cards**: Real-time insights on:
-  - Total Sales Revenue  
-  - Average Order Value  
-  - Total Orders Placed  
-  - Total Profit  
-  - Profit Margin (%)  
-  - Average Shipment Time  
-
-- **Dynamic Filtering Panel**:
-  - Region, State, Category, Sub-category, Customer Segment
-  - Custom date range selection
-
-- **Interactive Visuals**:
-  - **Sales Over Time** with optional Moving Average
-  - **Top 10 Products by Sales**
-  - **Sales by Region (Choropleth Map)**
-
-- **Period-over-Period Comparison**: Tracks % change across KPIs compared to past period (with no-change notification support)
+🔗 **Live App:** [kksuperstoredashboard.streamlit.app](https://kksuperstoredashboard.streamlit.app)
 
 ---
 
-## 📁 Dataset
+## 🧠 Project Objective
 
-- **Source**: [Sample Superstore Dataset](https://community.tableau.com/s/sample-superstore)
-- Contains order-level transaction data from 2014–2017
-- Two sheets used:
-  - `Orders`: Sales, Profit, Quantity, Category, Segment, Date, Region
-  - `Returns` (optional): Used to flag returned orders
+The objective of this project is to create a user-friendly BI (Business Intelligence) dashboard that enables stakeholders to:
+
+- Monitor and compare key performance indicators (KPIs) over time
+- Explore trends in sales, profit, order quantity, and shipment metrics
+- Drill down by geography, product categories, and customer segments
+- Understand regional and product-level performance visually
+
+---
+
+## 📁 Dataset Overview
+
+The dashboard uses the [Sample Superstore Dataset](https://community.tableau.com/s/sample-superstore), a public dataset commonly used in retail analytics projects. It includes:
+
+- **Orders Sheet**: Contains sales transactions, profit, categories, customer info, and dates (2014–2017)
+- **Returns Sheet** *(optional)*: Identifies returned orders
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Streamlit** – UI rendering and interactivity  
-- **Pandas** – Data manipulation and aggregation  
-- **Plotly Express** – Charts and map visualizations  
-- **OpenPyXL** – Excel file handling  
+| Component   | Purpose                        |
+|-------------|--------------------------------|
+| **Streamlit** | Web app interface and deployment |
+| **Pandas**    | Data manipulation and filtering |
+| **Plotly**    | Interactive charts and maps     |
+| **OpenPyXL**  | Excel data reading              |
 
 ---
 
-## 🚀 Getting Started
+## 🔍 Dashboard Features
 
-### 🔧 Installation
+### 📌 KPI Summary Cards
+Displays high-level business metrics with period-over-period comparisons:
+- Total Sales Revenue
+- Average Order Value
+- Total Orders Placed
+- Total Profit
+- Profit Margin (%)
+- Average Shipment Time
 
-```bash
-pip install streamlit pandas plotly openpyxl
+### 📊 Visual Insights
+- **Sales Over Time**: Time-series plot with optional moving average
+- **Top 10 Products by Sales**: Horizontal bar chart
+- **Sales by Region**: US map with sales shading
+- **Customizable Filters**: Region, State, Category, Sub-Category, Segment, Date range
+
+### ⚠️ Alerts
+If no period-over-period change is detected, a notification banner is displayed to indicate stable performance or data gaps.
